@@ -1,0 +1,37 @@
+{
+    "owner_field": "assigned_to",
+    "status_field": "internal_status",
+    "priority_field": "priority_tag",
+    "region_field": "region",
+    "owner_aliases": {
+        "Garima": [
+            "G",
+            "G Sharma",
+            "Garima",
+            "Garima K"
+        ],
+        "Gari": [
+            "Gari"
+        ]
+    },
+    "status_groups": {
+        "open": [
+            "Follow-up Required",
+            "On hold",
+            "Active",
+            "Waiting on client"
+        ],
+        "closed": [
+            "Dead leads"
+        ]
+    },
+    "business_rules": [
+        "Deals with internal_status 'Dead leads' consistently correspond to dealstage 'closedlost'.",
+        "High priority_tag values are predominantly linked to active or follow-up states, whereas low priority values frequently map to dead leads.",
+        "Owner names exhibit inconsistent formatting (initials, full names, surname suffixes), requiring normalization for accurate reporting."
+    ],
+    "confidence": {
+        "owner_aliases": 0.75,
+        "status_groups": 0.9
+    }
+}
